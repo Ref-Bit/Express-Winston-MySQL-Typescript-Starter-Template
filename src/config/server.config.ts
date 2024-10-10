@@ -18,8 +18,10 @@ interface ENV {
   APP_NAME: string | undefined;
   LOGS_DIR: string | undefined;
   DB_HOST: string | undefined;
+  DB_PORT: number | undefined;
   DB_USER: string | undefined;
   DB_PASSWORD: string | undefined;
+  DB_NAME: string | undefined;
 }
 
 interface Config {
@@ -28,8 +30,10 @@ interface Config {
   APP_NAME: string;
   LOGS_DIR: string;
   DB_HOST: string;
+  DB_PORT: number;
   DB_USER: string;
   DB_PASSWORD: string;
+  DB_NAME: string;
 }
 
 // Loading process.env as ENV interface
@@ -43,8 +47,10 @@ const getConfig = (): ENV => {
     APP_NAME: env.APP_NAME,
     LOGS_DIR: env.LOGS_DIR || "logs",
     DB_HOST: env.DB_HOST,
+    DB_PORT: Number(env.DB_PORT),
     DB_USER: env.DB_USER,
     DB_PASSWORD: env.DB_PASSWORD,
+    DB_NAME: env.DB_NAME,
   };
 };
 

@@ -1,11 +1,14 @@
 import mysql, { Pool, ResultSetHeader, RowDataPacket } from "mysql2/promise";
 import type { MySQLQueryError } from "../types/db.type";
 import { logger } from "../utils/logger.utils";
+import { config } from "./server.config";
 
 const pool: Pool = mysql.createPool({
-  host: process.env.DB_HOST || "localhost",
-  user: process.env.DB_USER || "root",
-  password: process.env.DB_PASSWORD || "myPassword",
+  host: config.DB_HOST || "localhost",
+  port: config.DB_PORT || 3306,
+  user: config.DB_USER || "root",
+  password: config.DB_PASSWORD || "myP@s$WoRd",
+  database: config.DB_NAME || "my_database",
   waitForConnections: true,
   multipleStatements: true,
   connectionLimit: 10,

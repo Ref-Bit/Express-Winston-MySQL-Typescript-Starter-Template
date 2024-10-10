@@ -1,7 +1,7 @@
 {
   "name": "bits",
   "version": "1.0.0",
-  "description": "A starter template with expressjs & winston & typescript.",
+  "description": "A starter template with expressjs & winston & mysql & typescript.",
   "main": "dist/index.js",
   "scripts": {
     "build": "estc",
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
+    "@types/express": "^4.17.21",
     "@types/lodash": "^4.17.10",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.7.4",
