@@ -14,7 +14,7 @@
     "dotenv",
     "expressjs",
     "helmet",
-    "mysql2",
+    "mysql",
     "morgan",
     "typescript",
     "winston"
