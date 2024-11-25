@@ -4,7 +4,7 @@
   "description": "A starter template with expressjs & winston & mysql & typescript.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "estc",
+    "build": "etsc",
     "start": "node dist/index.js",
     "dev": "nodemon"
   },
